@@ -1,6 +1,7 @@
 name: spark
 title: Apache Spark
 icon: spark
+docs: https://wodby.com/docs/2.0/stacks/catalog/spark/
 
 services:
 - name: master
