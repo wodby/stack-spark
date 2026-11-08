@@ -9,17 +9,6 @@ services:
   service: spark-master
   required: true
   main: true
-  workloads:
-  - name: main
-    containers:
-    - name: spark-master
-      resources:
-        request:
-          cpu: 500
-          memory: 1024
-        limit:
-          cpu: 1000
-          memory: 2048
 - name: worker
   title: Spark worker
   service: spark-worker
@@ -28,14 +17,3 @@ services:
   links:
   - name: master
     service: master
-  workloads:
-  - name: main
-    containers:
-    - name: spark-worker
-      resources:
-        request:
-          cpu: 1000
-          memory: 2048
-        limit:
-          cpu: 2000
-          memory: 4096
